@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import { useDispatch, useSelector } from 'react-redux'
+import Add from './store/action';
+import minus from './store/action2';
+import UsersComp from './Components/UsersComp';
 
 function App() {
+
+  const hhh = useSelector((state) => state.myReducer);
+
+  const dispatch = useDispatch();
+  
+  const handleClickAdd = ()=>{
+    dispatch(Add(hhh));
+  }
+  const handleClickMinus = ()=>{
+    dispatch(minus(hhh));
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App ">
+     ola
+     <div>{hhh}</div>
+     <button onClick={handleClickMinus}>-</button>
+     <button onClick={handleClickAdd}>+</button>
+     <UsersComp />
     </div>
   );
 }
