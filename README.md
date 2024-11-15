@@ -1,4 +1,4 @@
-# redux-thunk-hoooks_add_minus_add-by-value
+# redux-thunk-useSelector-useDispatch-hooks-iti
 
 This is not a real project ,it just for learning and trying . this simple project built with ReactJs [function-component][hooks] and redux thunk. 
 
